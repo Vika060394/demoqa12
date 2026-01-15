@@ -16,7 +16,6 @@ def test_check_icon(browser):
 
     # создаем объект класса и передаем browser
     demo_qa_page = DemoQa(browser)
-    # функция visit, посещаем страницу
     demo_qa_page.visit()
     # time.sleep(3)
     demo_qa_page.icon.click()

@@ -12,7 +12,7 @@ class DemoQa(BasePage):
         self.btn_elements = WebElement (driver, "#app > div > div > div.home-body > div > div:nth-child(1)")
         self.podval = WebElement(driver, '#app > footer > span')
         self.elements_center = WebElement(driver, ' #app > div > div > div > div.col-12.mt-4.col-md-6')
-
+        self.h5 = WebElement(driver, 'h5')
 
 
 

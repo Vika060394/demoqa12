@@ -1,10 +1,14 @@
 from selenium.webdriver.common.by import By
 import time
+import logging
+from components.components import WebElement
+
 
 class BasePage:
     def __init__(self, driver, base_url):
         self.driver = driver
         self.base_url = base_url
+        self.viewport = WebElement(driver, 'head > meta')
 
 
     def visit(self):
@@ -34,5 +38,13 @@ class BasePage:
 
     def get_title(self):
         self.driver.title()
-        
+
+    def alert(self):
+        try:
+            return self.driver.switch_to.alert
+        except Exception as ex:
+            logging.log(1, ex)
+            return False
+
+
 

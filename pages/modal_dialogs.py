@@ -10,3 +10,9 @@ class ModalDialogs(BasePage):
 
         self.modal_btn = WebElement(driver, 'button.btn.btn-primary')
         self.icon_el = WebElement(driver, '#app > header > a > img')
+        self.btn_small = WebElement(driver, '#showSmallModal')
+        self.btn_large = WebElement(driver, '#showLargeModal')
+        self.modal_small = WebElement(driver, 'body > div.fade.modal.show')
+        self.modal_large = WebElement(driver, 'body > div.fade.modal.show')
+        self.btn_small_close = WebElement(driver, '#closeSmallModal')
+        self.btn_large_close = WebElement(driver, '#closeLargeModal')
